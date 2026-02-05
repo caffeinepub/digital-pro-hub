@@ -1,0 +1,17 @@
+{
+  "frontend/index.html": "HTML entry point with Google Search Console verification meta tag and basic document structure",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for five pages (Home, About, Services, Instant Price Calculator, Contact) wrapped in SiteLayout.",
+  "frontend/src/components/SiteLayout.tsx": "Layout wrapper component that provides consistent structure with TopNav, main content area, and SiteFooter across all pages",
+  "frontend/src/components/TopNav.tsx": "Responsive navigation header with logo, desktop menu, and mobile hamburger menu that highlights the current page, now including the Instant Price Calculator link.",
+  "frontend/src/components/SiteFooter.tsx": "Site footer with navigation links including the new Instant Price Calculator link and attribution with caffeine.ai branding.",
+  "frontend/src/pages/Home.tsx": "Home page with hero section (exact headline/subheading, WhatsApp and Services CTAs), highlights grid with icons, and short intro section",
+  "frontend/src/pages/About.tsx": "About page displaying the provided content verbatim with clean typography and trust-building layout",
+  "frontend/src/pages/Services.tsx": "Services page with three service cards, pricing note, and three-step \"How It Works\" section",
+  "frontend/src/pages/Contact.tsx": "Contact page with phone number, WhatsApp button, online service note, and Terms & Conditions section",
+  "frontend/src/hooks/useSeo.ts": "Custom hook to set page-specific document titles and meta descriptions for SEO",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for React Query hooks (no backend queries needed for this static site)",
+  "frontend/src/index.css": "Global styles with customized OKLCH color system featuring a professional blue primary color for light and dark modes",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens, border radius, and typography settings",
+  "frontend/src/lib/instantPriceCalculatorPricing.ts": "Centralized pricing configuration with a matrix of service types and work levels, providing a helper function to retrieve estimated prices without embedding values in UI markup.",
+  "frontend/src/pages/InstantPriceCalculator.tsx": "Instant Price Calculator page with two dropdowns for service type and work level, displaying instant price estimates and a WhatsApp contact button with consistent site styling."
+}

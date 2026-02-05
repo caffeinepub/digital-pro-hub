@@ -1,0 +1,166 @@
+{
+  "kind": "build_request",
+  "title": "Add Instant Price Calculator page with dropdown-based estimate and WhatsApp CTA",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a new route and page named “Instant Price Calculator” to the existing React website (new path: /instant-price-calculator) and ensure it renders inside the existing SiteLayout (TopNav + footer) like the other pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add a new page called “Instant Price Calculator” to the existing website."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating to /instant-price-calculator renders a new page titled “Instant Price Calculator”.",
+        "The new page uses the existing layout (TopNav and SiteFooter) and does not break existing routes (/ /about /services /contact)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update global navigation to include the new “Instant Price Calculator” page link in both the TopNav and the SiteFooter navigation lists, keeping the visual style consistent with the existing website navigation behavior (including active link highlighting).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Keep the design consistent with the existing website."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Top navigation includes a visible link labeled “Instant Price Calculator” that navigates to /instant-price-calculator.",
+        "Footer navigation includes a visible link labeled “Instant Price Calculator” that navigates to /instant-price-calculator.",
+        "Active-link styling works for the new route the same way it does for the existing pages."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create the Instant Price Calculator page UI containing a clean, simple calculator section with exactly two dropdowns: (1) “Service Type” with options “PPT Making”, “Website Help”, “Document / Notes Work”; (2) “Work Level” with options “Basic”, “Medium”, “Advanced”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add a clean, simple price calculator section",
+          "Dropdown 1: Service Type",
+          "PPT Making",
+          "Website Help",
+          "Document / Notes Work",
+          "Dropdown 2: Work Level",
+          "Basic",
+          "Medium",
+          "Advanced"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page shows two dropdown inputs labeled “Service Type” and “Work Level” with the exact option text specified.",
+        "The layout is responsive and consistent with existing page spacing/typography (similar container widths and section padding used across the site)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement instant estimated-price calculation on the frontend: when the user selects both dropdown values, display the estimated price immediately without requiring a submit button. Store the pricing logic in a single, easy-to-edit configuration (e.g., a constant price matrix keyed by service type and work level) within the new page file or a small dedicated helper file.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Show the estimated price instantly when options are selected"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Changing either dropdown updates the displayed estimate immediately.",
+        "If one or both dropdowns are not selected yet, the price area shows a neutral placeholder state (no estimate).",
+        "Pricing values are centralized in a single configuration object so a developer can update prices without touching UI markup."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Display the note text exactly as: “Final price may vary based on requirements” within the calculator section near the estimate.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Display a note: “Final price may vary based on requirements”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The note is visible on the page and matches the exact text and punctuation provided."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a “Contact / WhatsApp” button below the estimated price that opens WhatsApp in a new tab using the existing project WhatsApp link: https://wa.me/918855003190.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add a Contact / WhatsApp button below the price"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A button labeled “Contact / WhatsApp” appears below the price display.",
+        "Clicking the button opens https://wa.me/918855003190 in a new tab (target=_blank) with appropriate rel attributes."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add SEO metadata for the new page using the existing SEO hook pattern (page title and meta description) and ensure the page has a single primary H1 heading: “Instant Price Calculator”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add a new page called “Instant Price Calculator” to the existing website."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The document title is set to an SEO-friendly value including “Instant Price Calculator” and “Digital Pro Hub”.",
+        "The page includes exactly one H1 heading: “Instant Price Calculator”."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Do not change the content or layout of existing pages (Home, About, Services, Contact); only add the new page and the necessary navigation entries to reach it.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Do not change other page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home, About, Services, and Contact page content remains unchanged aside from any unavoidable shared navigation link additions.",
+        "No backend code changes are introduced for this feature."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text on the new page UI (including labels, button text, placeholders, and notes).",
+    "Do not modify files under frontend immutablePaths (compose existing UI components instead of editing them).",
+    "Do not add backend functionality; this feature must be implemented entirely in the frontend."
+  ],
+  "nonGoals": [
+    "Collecting payments or integrating any payment gateway.",
+    "Saving calculator selections or estimates to the backend.",
+    "Adding third-party authentication beyond the existing Internet Identity integration."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

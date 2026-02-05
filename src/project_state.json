@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Digital Pro Hub professional multi-page marketing website built on the existing ICP starter scaffold (React/Vite/Tailwind/shadcn/ui frontend with Motoko backend template), including Home/About/Services/Contact pages, SEO metadata, WhatsApp contact flow, and required Google Search Console verification meta tag on the Home page.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko backend canister scaffold",
+      "synonyms": [
+        "backend canister",
+        "Motoko service"
+      ],
+      "description": "Initial Motoko canister added (backend/main.mo) with generated Candid bindings exposed to the frontend.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React + Vite frontend scaffold with Tailwind and shadcn/ui components",
+      "synonyms": [
+        "frontend scaffold",
+        "UI component library"
+      ],
+      "description": "Vite React app with Tailwind styling and a bundled shadcn/ui component set plus lint/config support.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Site layout and navigation pages",
+      "synonyms": [
+        "static pages",
+        "marketing pages"
+      ],
+      "description": "App shell with TopNav, SiteLayout, SiteFooter and basic pages: Home, About, Services, Contact.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Internet Identity integration hooks",
+      "synonyms": [
+        "II auth",
+        "Internet Identity"
+      ],
+      "description": "Client hooks/utilities for Internet Identity login state and actor creation (useInternetIdentity, useActor, query helpers).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Frontend-to-canister type declarations and agent wrapper",
+      "synonyms": [
+        "candid bindings",
+        "backend declarations"
+      ],
+      "description": "Generated backend DID JS/TS declarations and frontend backend.ts wrapper for calling the canister.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Build/deploy template tooling for ICP project",
+      "synonyms": [
+        "build template",
+        "deployment scripts"
+      ],
+      "description": "Build template assets (Dockerfile, deploy.sh, icp.yaml, workspace/package configs, image scripts) to support consistent builds and deployment.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Client-side storage utility",
+      "synonyms": [
+        "StorageClient",
+        "local storage helper"
+      ],
+      "description": "Utility added for managing client storage concerns (frontend/src/utils/StorageClient.ts).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-route-and-page-named-instant-price-calculator-to-the-existing-react-website-new-path-instant-price-calculator-and-ensure-it-renders-inside-the-existing-sitelayout-topnav-footer-like-the-other-pages",
+      "title": "Add a new route and page named “Instant Price Calculator” to the existing React website (new path: /instant-price-calculator) and ensure it renders inside the existing SiteLayout (TopNav + footer) like the other pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-global-navigation-to-include-the-new-instant-price-calculator-page-link-in-both-the-topnav-and-the-sitefooter-navigation-lists-keeping-the-visual-style-consistent-with-the-existing-website-navigation-behavior-including-active-link-highlighting",
+      "title": "Update global navigation to include the new “Instant Price Calculator” page link in both the TopNav and the SiteFooter navigation lists, keeping the visual style consistent with the existing website navigation behavior (including active link highlighting).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-instant-price-calculator-page-ui-containing-a-clean-simple-calculator-section-with-exactly-two-dropdowns-1-service-type-with-options-ppt-making-website-help-document-notes-work-2-work-level-with-options-basic-medium-advanced",
+      "title": "Create the Instant Price Calculator page UI containing a clean, simple calculator section with exactly two dropdowns: (1) “Service Type” with options “PPT Making”, “Website Help”, “Document / Notes Work”; (2) “Work Level” with options “Basic”, “Medium”, “Advanced”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-instant-estimated-price-calculation-on-the-frontend-when-the-user-selects-both-dropdown-values-display-the-estimated-price-immediately-without-requiring-a-submit-button-store-the-pricing-logic-in-a-single-easy-to-edit-configuration-e-g-a-constant-price-matrix-keyed-by-service-type-and-work-level-within-the-new-page-file-or-a-small-dedicated-helper-file",
+      "title": "Implement instant estimated-price calculation on the frontend: when the user selects both dropdown values, display the estimated price immediately without requiring a submit button. Store the pricing logic in a single, easy-to-edit configuration (e.g., a constant price matrix keyed by service type and work level) within the new page file or a small dedicated helper file.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-note-text-exactly-as-final-price-may-vary-based-on-requirements-within-the-calculator-section-near-the-estimate",
+      "title": "Display the note text exactly as: “Final price may vary based on requirements” within the calculator section near the estimate.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-whatsapp-button-below-the-estimated-price-that-opens-whatsapp-in-a-new-tab-using-the-existing-project-whatsapp-link-https-wa-me-918855003190",
+      "title": "Add a “Contact / WhatsApp” button below the estimated price that opens WhatsApp in a new tab using the existing project WhatsApp link: https://wa.me/918855003190.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seo-metadata-for-the-new-page-using-the-existing-seo-hook-pattern-page-title-and-meta-description-and-ensure-the-page-has-a-single-primary-h1-heading-instant-price-calculator",
+      "title": "Add SEO metadata for the new page using the existing SEO hook pattern (page title and meta description) and ensure the page has a single primary H1 heading: “Instant Price Calculator”.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-do-not-change-the-content-or-layout-of-existing-pages-home-about-services-contact-only-add-the-new-page-and-the-necessary-navigation-entries-to-reach-it",
+      "title": "Do not change the content or layout of existing pages (Home, About, Services, Contact); only add the new page and the necessary navigation entries to reach it.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add new “Instant Price Calculator” page with Service Type + Work Level dropdowns, instant estimated price display, note about final price variability, and WhatsApp contact button; keep styling consistent and do not change other pages",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Architecture split into Motoko backend canister and React/Vite frontend, with generated Candid bindings used by the frontend for canister calls.",
+    "Internet Identity is the intended authentication provider; frontend includes dedicated hooks for auth state and actor creation.",
+    "UI layer uses Tailwind CSS plus a local vendored shadcn/ui component set.",
+    "Repository includes a build/deploy template (Dockerfile, icp.yaml, deploy script, workspace tooling) to standardize builds.",
+    "Home page must include and preserve the provided Google Search Console verification meta tag in <head>."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "gameProjectType": "none",
+  "projectName": "Digital Pro Hub",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
