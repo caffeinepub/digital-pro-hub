@@ -6,9 +6,9 @@ export default function Home() {
   const navigate = useNavigate();
 
   useSeo({
-    title: 'Digital Pro Hub - Affordable Digital Services for Students and Small Businesses',
+    title: 'Webzio – Digital Services Made Simple',
     description:
-      'Quality PPTs, websites, and digital help at budget-friendly prices. Student-run digital services platform offering simple, reliable, and affordable solutions.',
+      'Webzio offers PPTs, websites, and digital help at student-friendly prices.',
   });
 
   const highlights = [
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-lg leading-relaxed text-foreground md:text-xl">
-              Digital Pro Hub is a student-run digital services platform offering simple, reliable, and
+              Webzio is a student-run digital services platform offering simple, reliable, and
               affordable solutions for everyday digital needs.
             </p>
           </div>

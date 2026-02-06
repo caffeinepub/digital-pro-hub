@@ -30,12 +30,12 @@ export default function SiteFooter() {
             <Heart className="h-4 w-4 fill-primary text-primary" />
             <span>using</span>
             <a
-              href="https://caffeine.ai"
+              href="https://webzio.caffeine.app"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-primary transition-colors hover:underline"
             >
-              caffeine.ai
+              webzio.caffeine.app
             </a>
           </div>
         </div>

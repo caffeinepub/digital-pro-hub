@@ -2,11 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-a-new-route-and-page-named-instant-price-calculator-to-the-existing-react-website-new-path-instant-price-calculator-and-ensure-it-renders-inside-the-existing-sitelayout-topnav-footer-like-the-other-pages",
-      "featureTitle": "Add a new route and page named “Instant Price Calculator” to the existing React website (new path: /instant-price-calculator) and ensure it renders inside the existing SiteLayout (TopNav + footer) like the other pages.",
+      "featureId": "feature-change-the-website-link-shown-in-the-site-footer-attribution-from-https-caffeine-ai-to-https-webzio-caffeine-app-including-updating-the-anchor-text-to-display-webzio-caffeine-app",
+      "featureTitle": "Change the website link shown in the site footer attribution from https://caffeine.ai to https://webzio.caffeine.app, including updating the anchor text to display \"webzio.caffeine.app\".",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/pages/InstantPriceCalculator.tsx"
+        "frontend/src/components/SiteFooter.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,136 +16,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-global-navigation-to-include-the-new-instant-price-calculator-page-link-in-both-the-topnav-and-the-sitefooter-navigation-lists-keeping-the-visual-style-consistent-with-the-existing-website-navigation-behavior-including-active-link-highlighting",
-      "featureTitle": "Update global navigation to include the new “Instant Price Calculator” page link in both the TopNav and the SiteFooter navigation lists, keeping the visual style consistent with the existing website navigation behavior (including active link highlighting).",
-      "files": [
-        "frontend/src/components/SiteFooter.tsx",
-        "frontend/src/components/TopNav.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-the-instant-price-calculator-page-ui-containing-a-clean-simple-calculator-section-with-exactly-two-dropdowns-1-service-type-with-options-ppt-making-website-help-document-notes-work-2-work-level-with-options-basic-medium-advanced",
-      "featureTitle": "Create the Instant Price Calculator page UI containing a clean, simple calculator section with exactly two dropdowns: (1) “Service Type” with options “PPT Making”, “Website Help”, “Document / Notes Work”; (2) “Work Level” with options “Basic”, “Medium”, “Advanced”.",
-      "files": [
-        "frontend/src/pages/InstantPriceCalculator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-instant-estimated-price-calculation-on-the-frontend-when-the-user-selects-both-dropdown-values-display-the-estimated-price-immediately-without-requiring-a-submit-button-store-the-pricing-logic-in-a-single-easy-to-edit-configuration-e-g-a-constant-price-matrix-keyed-by-service-type-and-work-level-within-the-new-page-file-or-a-small-dedicated-helper-file",
-      "featureTitle": "Implement instant estimated-price calculation on the frontend: when the user selects both dropdown values, display the estimated price immediately without requiring a submit button. Store the pricing logic in a single, easy-to-edit configuration (e.g., a constant price matrix keyed by service type and work level) within the new page file or a small dedicated helper file.",
-      "files": [
-        "frontend/src/lib/instantPriceCalculatorPricing.ts",
-        "frontend/src/pages/InstantPriceCalculator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-display-the-note-text-exactly-as-final-price-may-vary-based-on-requirements-within-the-calculator-section-near-the-estimate",
-      "featureTitle": "Display the note text exactly as: “Final price may vary based on requirements” within the calculator section near the estimate.",
-      "files": [
-        "frontend/src/pages/InstantPriceCalculator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-contact-whatsapp-button-below-the-estimated-price-that-opens-whatsapp-in-a-new-tab-using-the-existing-project-whatsapp-link-https-wa-me-918855003190",
-      "featureTitle": "Add a “Contact / WhatsApp” button below the estimated price that opens WhatsApp in a new tab using the existing project WhatsApp link: https://wa.me/918855003190.",
-      "files": [
-        "frontend/src/pages/InstantPriceCalculator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-seo-metadata-for-the-new-page-using-the-existing-seo-hook-pattern-page-title-and-meta-description-and-ensure-the-page-has-a-single-primary-h1-heading-instant-price-calculator",
-      "featureTitle": "Add SEO metadata for the new page using the existing SEO hook pattern (page title and meta description) and ensure the page has a single primary H1 heading: “Instant Price Calculator”.",
-      "files": [
-        "frontend/src/pages/InstantPriceCalculator.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-do-not-change-the-content-or-layout-of-existing-pages-home-about-services-contact-only-add-the-new-page-and-the-necessary-navigation-entries-to-reach-it",
-      "featureTitle": "Do not change the content or layout of existing pages (Home, About, Services, Contact); only add the new page and the necessary navigation entries to reach it.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/SiteFooter.tsx",
-        "frontend/src/components/TopNav.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
       ],
       "confidence": "high"
     }

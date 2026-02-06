@@ -1,110 +1,23 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-05T07:50:48.335Z",
+  "generatedAt": "2026-02-06T11:59:18.784Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 8,
-    "implemented": 8,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Add a new route and page named “Instant Price Calculator” to the existing React website (new path: /instant-price-calculator) and ensure it renders inside the existing SiteLayout (TopNav + footer) like the other pages.",
+        "summary": "Change the website link shown in the site footer attribution from https://caffeine.ai to https://webzio.caffeine.app, including updating the anchor text to display \"webzio.caffeine.app\".",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Update global navigation to include the new “Instant Price Calculator” page link in both the TopNav and the SiteFooter navigation lists, keeping the visual style consistent with the existing website navigation behavior (including active link highlighting).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TopNav.tsx",
           "frontend/src/components/SiteFooter.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/TopNav.tsx",
-          "frontend/src/components/SiteFooter.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Create the Instant Price Calculator page UI containing a clean, simple calculator section with exactly two dropdowns: (1) “Service Type” with options “PPT Making”, “Website Help”, “Document / Notes Work”; (2) “Work Level” with options “Basic”, “Medium”, “Advanced”.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Implement instant estimated-price calculation on the frontend: when the user selects both dropdown values, display the estimated price immediately without requiring a submit button. Store the pricing logic in a single, easy-to-edit configuration (e.g., a constant price matrix keyed by service type and work level) within the new page file or a small dedicated helper file.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/lib/instantPriceCalculatorPricing.ts",
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/lib/instantPriceCalculatorPricing.ts",
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Display the note text exactly as: “Final price may vary based on requirements” within the calculator section near the estimate.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Add a “Contact / WhatsApp” button below the estimated price that opens WhatsApp in a new tab using the existing project WhatsApp link: https://wa.me/918855003190.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ]
-      },
-      {
-        "id": "REQ-7",
-        "summary": "Add SEO metadata for the new page using the existing SEO hook pattern (page title and meta description) and ensure the page has a single primary H1 heading: “Instant Price Calculator”.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/InstantPriceCalculator.tsx"
-        ]
-      },
-      {
-        "id": "REQ-8",
-        "summary": "Do not change the content or layout of existing pages (Home, About, Services, Contact); only add the new page and the necessary navigation entries to reach it.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/TopNav.tsx",
-          "frontend/src/components/SiteFooter.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/TopNav.tsx",
           "frontend/src/components/SiteFooter.tsx"
         ]
       }
@@ -112,15 +25,10 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/App.tsx",
     "frontend/src/components/SiteFooter.tsx",
-    "frontend/src/components/TopNav.tsx",
-    "frontend/src/lib/instantPriceCalculatorPricing.ts",
-    "frontend/src/pages/InstantPriceCalculator.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

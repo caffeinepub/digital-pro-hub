@@ -1,151 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Instant Price Calculator page with instant estimate and WhatsApp CTA",
+  "title": "Update footer attribution link to webzio.caffeine.app",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Add a new /instant-price-calculator route and page rendered within the existing SiteLayout.",
+      "summary": "Update the site footer attribution hyperlink to point to https://webzio.caffeine.app and display the new domain as the anchor text while preserving new-tab and security attributes.",
       "acceptanceCriteria": [
-        "Navigating to /instant-price-calculator renders a new page titled “Instant Price Calculator”.",
-        "The new page uses the existing layout (TopNav and SiteFooter) and does not break existing routes (/ /about /services /contact)."
+        "In the footer attribution, the hyperlink href is exactly \"https://webzio.caffeine.app\".",
+        "The visible link text in the footer attribution is exactly \"webzio.caffeine.app\".",
+        "The link still opens in a new tab and retains appropriate security attributes (target=\"_blank\" and rel including \"noopener noreferrer\")."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "create",
-          "description": "Create the new Instant Price Calculator page component that will be mounted by the router inside the existing SiteLayout (no layout changes needed)."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Register a new TanStack Router route for /instant-price-calculator and add it to the route tree so it renders within the existing root route (SiteLayout + Outlet)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Add navigation links for the new page in TopNav and SiteFooter with consistent styling and active-link behavior.",
-      "acceptanceCriteria": [
-        "Top navigation includes a visible link labeled “Instant Price Calculator” that navigates to /instant-price-calculator.",
-        "Footer navigation includes a visible link labeled “Instant Price Calculator” that navigates to /instant-price-calculator.",
-        "Active-link styling works for the new route the same way it does for the existing pages."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/TopNav.tsx",
-          "operation": "modify",
-          "description": "Add an “Instant Price Calculator” entry to the existing navLinks array so it appears in both desktop and mobile menus, inheriting the currentPath-based active styling behavior."
-        },
         {
           "path": "frontend/src/components/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Add an “Instant Price Calculator” entry to the footer navLinks list, keeping styling consistent with existing footer navigation links."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Build the page UI with a clean calculator section containing exactly two dropdowns with specified labels and options.",
-      "acceptanceCriteria": [
-        "The page shows two dropdown inputs labeled “Service Type” and “Work Level” with the exact option text specified.",
-        "The layout is responsive and consistent with existing page spacing/typography (similar container widths and section padding used across the site)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "modify",
-          "description": "Implement the calculator UI section using existing site spacing patterns (container, section padding) and render exactly two dropdowns: “Service Type” (PPT Making, Website Help, Document / Notes Work) and “Work Level” (Basic, Medium, Advanced)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Implement instant estimated-price calculation with centralized, easy-to-edit pricing configuration.",
-      "acceptanceCriteria": [
-        "Changing either dropdown updates the displayed estimate immediately.",
-        "If one or both dropdowns are not selected yet, the price area shows a neutral placeholder state (no estimate).",
-        "Pricing values are centralized in a single configuration object so a developer can update prices without touching UI markup."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/lib/instantPriceCalculatorPricing.ts",
-          "operation": "create",
-          "description": "Create a single, centralized pricing configuration (e.g., a price matrix keyed by Service Type and Work Level) and export helper(s) to retrieve an estimate without embedding pricing values in UI markup."
-        },
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "modify",
-          "description": "Wire dropdown state to instant estimate rendering (no submit button), showing a neutral placeholder when selections are incomplete and showing the estimate immediately once both selections are chosen; source pricing via the centralized pricing configuration."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Show the note text exactly near the estimate inside the calculator section.",
-      "acceptanceCriteria": [
-        "The note is visible on the page and matches the exact text and punctuation provided."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "modify",
-          "description": "Add the note text exactly as: “Final price may vary based on requirements” within the calculator section near the estimate display."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Add a Contact / WhatsApp button that opens the existing WhatsApp link in a new tab.",
-      "acceptanceCriteria": [
-        "A button labeled “Contact / WhatsApp” appears below the price display.",
-        "Clicking the button opens https://wa.me/918855003190 in a new tab (target=_blank) with appropriate rel attributes."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "modify",
-          "description": "Add a “Contact / WhatsApp” button below the estimate area that links to https://wa.me/918855003190 with target=\"_blank\" and rel=\"noopener noreferrer\", styled consistently with existing CTA buttons."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add SEO metadata via the existing SEO hook and ensure a single primary H1 heading.",
-      "acceptanceCriteria": [
-        "The document title is set to an SEO-friendly value including “Instant Price Calculator” and “Digital Pro Hub”.",
-        "The page includes exactly one H1 heading: “Instant Price Calculator”."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/InstantPriceCalculator.tsx",
-          "operation": "modify",
-          "description": "Use the existing useSeo hook to set page title and meta description, and render exactly one H1 heading with the exact text “Instant Price Calculator”."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Limit changes to adding the new page and required navigation entries; avoid modifying existing page content and keep implementation frontend-only.",
-      "acceptanceCriteria": [
-        "Home, About, Services, and Contact page content remains unchanged aside from any unavoidable shared navigation link additions.",
-        "No backend code changes are introduced for this feature."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Constrain routing changes to only adding the new /instant-price-calculator route; do not alter existing route components or their content."
-        },
-        {
-          "path": "frontend/src/components/TopNav.tsx",
-          "operation": "modify",
-          "description": "Limit shared layout changes to adding the new navigation link entry only; do not change other navigation behavior or styling beyond what is necessary for the new link."
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Limit shared layout changes to adding the new footer navigation link entry only; do not change existing footer content beyond what is necessary for the new link."
+          "description": "Update the footer attribution <a> tag: change href from https://caffeine.ai to https://webzio.caffeine.app and change the visible anchor text to \"webzio.caffeine.app\", while keeping target=\"_blank\" and rel including \"noopener noreferrer\" unchanged."
         }
       ]
     }

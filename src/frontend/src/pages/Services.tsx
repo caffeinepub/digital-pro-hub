@@ -3,7 +3,7 @@ import { FileText, Globe, Wrench } from 'lucide-react';
 
 export default function Services() {
   useSeo({
-    title: 'Services - Digital Pro Hub',
+    title: 'Services - Webzio',
     description:
       'PPT making, website services, and digital assistance. Quality digital services at budget-friendly prices with clear pricing and fast delivery.',
   });

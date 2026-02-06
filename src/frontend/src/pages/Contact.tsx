@@ -3,9 +3,9 @@ import { Phone, MessageCircle, Globe } from 'lucide-react';
 
 export default function Contact() {
   useSeo({
-    title: 'Contact - Digital Pro Hub',
+    title: 'Contact - Webzio',
     description:
-      'Get in touch with Digital Pro Hub. Call or WhatsApp 8855003190 for quick response. Online service with digital meetings.',
+      'Get in touch with Webzio. Call or WhatsApp 8855003190 for quick response. Online service with digital meetings.',
   });
 
   const terms = [

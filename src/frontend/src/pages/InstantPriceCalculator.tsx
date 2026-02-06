@@ -17,7 +17,7 @@ export default function InstantPriceCalculator() {
   const [workLevel, setWorkLevel] = useState<string | null>(null);
 
   useSeo({
-    title: 'Instant Price Calculator - Digital Pro Hub',
+    title: 'Instant Price Calculator - Webzio',
     description:
       'Get instant price estimates for our digital services. Calculate costs for PPT making, website help, and document work based on your requirements.',
   });

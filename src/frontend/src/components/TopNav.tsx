@@ -18,8 +18,12 @@ export default function TopNav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">Digital Pro Hub</span>
+        <Link to="/" className="flex items-center space-x-3">
+          <img 
+            src="/assets/generated/webzio-logo-text.dim_512x128.png" 
+            alt="Webzio Logo" 
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
